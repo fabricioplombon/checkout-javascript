@@ -14,7 +14,7 @@
 
     <header id="header" class="header">
         <div class="header__logo">
-            <img src="./assets/img/icon_security.svg" alt="Logo">
+            <img src="./assets/img/icon_security_light.svg" alt="Logo">
         </div>
     </header>
 
@@ -26,8 +26,9 @@
             </div>
         </div>
 
-        <div class="main__form">
+        <section class="main__form">
             <div class="container">
+
                 <div class="col">
 
                     <div id="box-product" class="box product">
@@ -47,7 +48,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Produto <span>01</span> unid. </td>
+                                        <td>Coffee</td>
                                         <td><span>R$ 10,00</span></td>
                                     </tr>
                                     <tr>
@@ -69,50 +70,165 @@
                         <div class="box__title">
                             <h2>1. Identifique-se</h2>
                         </div>
-                        <span class="status status--error">erro</span>
+                        <span class="status status--error">Ocorreu um erro.</span>
                         <form id="form-identify" class="form">
-                            <input type="text" class="js-hidden" name="nome" placeholder="Nome">
-                            <div class="form__input">
-                                <input type="text" class="required" name="nome_completo" placeholder="Nome completo">
-                                <span class="form__input__error"></span>
+                            <!-- <input type="text" class="js-hidden" name="nome" placeholder="Nome"> -->
+                            <div class="row">
+                                <div class="form__input is-error">
+                                    <input type="text" class="required" name="nome_completo"
+                                        placeholder="Nome completo*">
+                                    <span class="form__input__error">Este campo é obrigatório</span>
+                                </div>
                             </div>
-                            <div class="form__input">
-                                <input type="email" class="required" name="email" placeholder="E-mail">
-                                <span class="form__input__error"></span>
+                            <div class="row">
+                                <div class="form__input">
+                                    <input type="email" class="required" name="email" placeholder="E-mail*">
+                                    <span class="form__input__error"></span>
+                                </div>
                             </div>
-                            <button type="submit" class="btn"><span>Enviar</span><i class="i-loading"></i></button>
+                            <div class="form__buttons">
+                                <button type="submit" class="btn"><span>Enviar</span><i class="i-loading"></i></button>
+                            </div>
                         </form>
                     </div>
 
                 </div>
+
+                <div class="col">
+                    <div class="box">
+                        <h2>2. Dados Cadastrais</h2>
+                        <span class="status status--error">Ocorreu um erro.</span>
+                        <form id="form-info" class="form">
+                            <div class="row">
+                                <div class="form__input">
+                                    <input type="text" class="required js-cpf" name="cpf" placeholder="CPF/CNPJ">
+                                    <span class="form__input__error"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form__input">
+                                    <input type="text" class="required js-phone" name="telefone" placeholder="Telefone">
+                                    <span class="form__input__error"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form__input">
+                                    <input type="text" class="required js-cep" id="input-cep" name="cep"
+                                        placeholder="CEP">
+                                    <span class="form__input__error"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="form__input">
+                                        <input type="text" class="js-rua required" name="rua" placeholder="Rua">
+                                        <span class="form__input__error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form__input">
+                                        <input type="text" class="required" name="numero" placeholder="Número">
+                                        <span class="form__input__error"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form__input">
+                                    <input type="text" name="complemento" placeholder="Complemento">
+                                    <span class="form__input__error"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form__input">
+                                    <input type="text" class="required js-bairro" name="bairro" placeholder="Bairro">
+                                    <span class="form__input__error"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="form__input">
+                                        <input type="text" class="required js-cidade" name="cidade"
+                                            placeholder="Cidade">
+                                        <span class="form__input__error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form__input">
+                                        <input type="text" class="required js-uf" name="uf" placeholder="UF">
+                                        <span class="form__input__error"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__buttons">
+                                <button type="submit" class="btn" disabled>
+                                    <span>Próximo</span>
+                                    <i class="i-loading"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="box">
+                        <h2>3. Pagamento</h2>
+                    </div>
+                </div>
+
             </div>
-        </div>
+        </section>
 
     </main>
 
     <footer id="footer" class="footer">
-        <div class="row">
-            <div class="container">
+        <div class="container">
+            <div class="row">
                 <div class="col">
-                    <img src="./assets/img/icon_security.svg" alt="Logo">
+                    <div class="footer__logo">
+                        <a href="#" alt="Compra Segura">
+                            <img src="./assets/img/icon_security_light.svg" alt="Logo">
+                        </a>
+                    </div>
                 </div>
                 <div class="col">
-                    <ul class="socials">
-                        <li><a href="#" target="_blank"><i class="i-facebook"></i></a></li>
+                    <ul class="footer__socials">
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col">
-                    <div class="email" data-title="email">@site.com.br</div>
+                    <div class="footer__    email" data-title="email">@site.com.br</div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="container">
-                <p>2023 &copy; Todos os direitos reservados.</p>
+                <div class="footer__copy">
+                    <p>2023 &copy; Todos os direitos reservados.</p>
+                </div>
             </div>
         </div>
     </footer>
 
+    <script src="https://kit.fontawesome.com/d1419a46cc.js" crossorigin="anonymous"></script>
     <script defer src="./bundle.js"></script>
 </body>
 

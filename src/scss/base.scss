@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+
+/* #Default
+================================================== */
+
+
+:root {
+    --color-main: #54534b;
+    --color-st: #17b978;
+    --color-st-light: #20e395;
+    --color-nd: #086972;
+    --color-nd-light: #57cc99;
+    --color-dark: #222222;
+    --color-light: #ffffff;
+    --color-gray: #f6f6f6;
+    --color-gray-nd: #dae1e7;
+    --color-error: #af0012;
+}
+
+:root {
+    --font-size: 1rem;
+    --line-height: 1.4rem;
+    --font-family: 'Ubuntu', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    background: var(--color-gray);
+    color: var(--color-main);
+    -webkit-overflow-scrolling: touch;
+    font-family: var(--font-family);
+    line-height: var(--line-height);
+    font-size: var(--font-size);
+    width: 100%;
+    max-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    flex: 1;
+}
+
+li {
+    list-style: none;
+}
+
+/* #Grid 
+====================================================*/
+
+.container {
+    position: relative;
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+    padding: 0;
+    justify-content: center;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    clear: both;
+}
+
+[class^="col-"] {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 50;
+}
+
+.col {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: .5rem;
+}
+
+
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: calc((100%/12) * #{$i});
+    }
+}
+
+
+/* #Headings
+====================================================*/
+
+h1 {
+    font-size: 2rem;
+    margin: .3rem 0;
+}
+
+h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--color-nd);
+    margin: 1rem 0;
+    text-align: center;
+}
+
+
+/* #Utilies 
+====================================================*/
+
+.is-hidden {
+    display: none;
+}
+
+.is-view {
+    display: block;
+}
+
+[class^="i-"] {
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    &:before {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: "";
+        top: 0;
+        right: 0;
+    }
+}
+
+.i-loading {
+    width: 25px;
+    height: 25px;
+
+    &:before {
+        background: url(./assets/img/icon_loading.gif) no-repeat center center/contain;
+    }
+}
+
+
+
+
+/* #Form
+====================================================*/
+
+input,
+select {
+    width: 100%;
+    padding: .8rem;
+    border: 1px solid var(--color-gray-nd);
+
+    &:hover,
+    &:focus {
+        outline: none;
+        border: 1px solid var(--color-nd);
+    }
+}
+
+button {
+    border: none;
+    background: var(--color-st);
+    color: var(--color-light);
+    padding: .8rem 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all ease-in-out 500ms;
+    margin: 1rem 0;
+
+    &:hover {
+        background: var(--color-nd-light);
+    }
+
+    i {
+        display: none;
+    }
+
+
+}
+
+.is-loading {
+    button {
+        span {
+            display: none;
+        }
+
+        i {
+            display: block;
+        }
+    }
+}
