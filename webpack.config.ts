@@ -1,8 +1,11 @@
 import path from "path";
 import { Configuration } from "webpack";
 
-const config: Configuration = {
-  entry: "./src/index.ts",
+const config: Configuration = {  
+  entry: [
+    __dirname + "/src/js/index.ts",
+    __dirname + "/src/scss/app.scss"
+  ],  
   module: {
     rules: [
       {
@@ -15,7 +18,16 @@ const config: Configuration = {
           },
         },
       },
-    ],
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        type: "asset/resource",
+        generator: {
+          filename: "bundle.css",
+        },
+        use: ["sass-loader"],
+      },
+    ],    
   },
   resolve: {
     extensions: [".ts", ".js"],
