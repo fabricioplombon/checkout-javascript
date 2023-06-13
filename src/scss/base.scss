@@ -64,9 +64,6 @@ main {
     flex: 1;
 }
 
-li {
-    list-style: none;
-}
 
 /* #Grid 
 ====================================================*/
@@ -123,7 +120,8 @@ h1 {
     margin: .3rem 0;
 }
 
-h2 {
+h2,
+h3 {
     font-size: 1.2rem;
     text-transform: uppercase;
     color: var(--color-nd);
@@ -177,6 +175,7 @@ input,
 select {
     width: 100%;
     padding: .8rem;
+    background: var(--color-light);
     border: 1px solid var(--color-gray-nd);
 
     &:hover,
@@ -186,7 +185,8 @@ select {
     }
 }
 
-button {
+button,
+.btn {
     border: none;
     background: var(--color-st);
     color: var(--color-light);
@@ -198,13 +198,17 @@ button {
     margin: 1rem 0;
 
     &:hover {
-        background: var(--color-nd-light);
+        background: var(--color-st-light);
+        color: var(--color-light);
+    }
+
+    &:disabled {
+        background: var(--color-gray-nd);
     }
 
     i {
         display: none;
     }
-
 
 }
 
