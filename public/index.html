@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <meta name="description" content="Tela de pagamento">
+    <base href="./">
+</head>
+
+<body>
+
+    <header id="header" class="header">
+        <div class="header__logo">
+            <img src="./" alt="Logo">
+        </div>
+    </header>
+
+    <main id="main" class="main">
+
+        <div class="main__header">
+            <div class="container">
+                <h1>Finalize sua compra</h1>
+            </div>
+        </div>
+
+        <div class="main__form">
+            <div class="container">
+                <div class="col">
+
+                    <div id="box-product" class="box product">
+                        <div class="box__title">
+                            <h2>Você está comprando</h2>
+                        </div>
+                        <div class="product__img">
+                            <img src="./" alt="Produto">
+                        </div>
+                        <div class="product__table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Produto <span>01</span> unid. </td>
+                                        <td><span>R$ 10,00</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Frete</td>
+                                        <td><span>R$ 5,00</span> (<span>10 dias úteis</span>)</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>Total</td>
+                                        <td id="js-tb-total">R$ 40,00</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="box-identify" class="box">
+                        <div class="box__title">
+                            <h2>1. Identifique-se</h2>
+                        </div>
+                        <span class="status status--error">erro</span>
+                        <form id="form-identify" class="form">
+                            <input type="text" class="js-hidden" name="nome" placeholder="Nome">
+                            <div class="form__input">
+                                <input type="text" class="required" name="nome_completo" placeholder="Nome completo">
+                                <span class="form__input__error"></span>
+                            </div>
+                            <div class="form__input">
+                                <input type="email" class="required" name="email" placeholder="E-mail">
+                                <span class="form__input__error"></span>
+                            </div>
+                            <button type="submit" class="btn"><span>Enviar</span><i class="i-loading"></i></button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="row">
+            <div class="container">
+                <div class="col">
+                    <img src="./" alt="Logo">
+                </div>
+                <div class="col">
+                    <ul class="socials">
+                        <li><a href="#" target="_blank"><i class="i-facebook"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="email" data-title="email">@site.com.br</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <p>2023 &copy; Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="bundle.js"></script>
+</body>
+
+</html>
