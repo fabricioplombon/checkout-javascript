@@ -8,6 +8,11 @@
     <meta name="description" content="Tela de pagamento">
     <base href="./">
     <link rel="stylesheet" href="./bundle.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
 </head>
 
 <body>
@@ -185,112 +190,114 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="payment__tab is-active" data-name="credito">
-                            <div class="box__title">
-                                <h3>3. Pagamento</h3>
-                                <strong>Cartão de Crédito</strong>
-                            </div>
-                            <span class="status status--error">Ocorreu um erro.</span>
-                            <form id="form-card" class="form">
-                                <div class="row">
-                                    <div class="form__input">
-                                        <input type="text" name="numero_cartao" class="required"
-                                            placeholder="Número Cartão">
-                                        <span class="form__input__error"></span>
-                                    </div>
+                        <div id="tabsContent">
+                            <div class="payment__tab is-active" data-name="credito">
+                                <div class="box__title">
+                                    <h3>3. Pagamento</h3>
+                                    <strong>Cartão de Crédito</strong>
                                 </div>
-                                <div class="row">
-                                    <div class="form__input">
-                                        <input type="text" name="nome_cartao" class="required"
-                                            placeholder="Nome impresso no cartão">
-                                        <span class="form__input__error"></span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
+                                <span class="status status--error">Ocorreu um erro.</span>
+                                <form id="form-card" class="form">
+                                    <div class="row">
                                         <div class="form__input">
-                                            <select name="validade" class="required">
-                                                <option value="-1">Mês</option>
-                                                <option value="01">01</option>
-                                                <option value="02">02</option>
-                                                <option value="03">03</option>
-                                                <option value="04">04</option>
-                                                <option value="05">05</option>
-                                                <option value="06">06</option>
-                                                <option value="07">07</option>
-                                                <option value="08">08</option>
-                                                <option value="09">09</option>
-                                                <option value="10">10</option>
-                                                <option value="11">11</option>
-                                                <option value="12">12</option>
-                                            </select>
+                                            <input type="text" name="numero_cartao" class="required"
+                                                placeholder="Número Cartão">
                                             <span class="form__input__error"></span>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="row">
                                         <div class="form__input">
-                                            <select name="ano" class="required">
-                                                <option value="-1">Ano</option>
-                                                <option value="20">2020</option>
-                                                <option value="21">2021</option>
-                                                <option value="22">2022</option>
-                                                <option value="23">2023</option>
-                                                <option value="24">2024</option>
-                                                <option value="25">2025</option>
-                                                <option value="26">2026</option>
-                                                <option value="27">2027</option>
-                                                <option value="28">2028</option>
-                                                <option value="29">2029</option>
-                                                <option value="30">2030</option>
-                                            </select>
+                                            <input type="text" name="nome_cartao" class="required"
+                                                placeholder="Nome impresso no cartão">
                                             <span class="form__input__error"></span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form__input">
-                                        <input type="text" name="codigo" maxlength="3" class="required"
-                                            placeholder="Código de Segurança">
-                                        <span class="form__input__error"></span>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form__input">
+                                                <select name="validade" class="required">
+                                                    <option value="-1">Mês</option>
+                                                    <option value="01">01</option>
+                                                    <option value="02">02</option>
+                                                    <option value="03">03</option>
+                                                    <option value="04">04</option>
+                                                    <option value="05">05</option>
+                                                    <option value="06">06</option>
+                                                    <option value="07">07</option>
+                                                    <option value="08">08</option>
+                                                    <option value="09">09</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                                <span class="form__input__error"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form__input">
+                                                <select name="ano" class="required">
+                                                    <option value="-1">Ano</option>
+                                                    <option value="20">2020</option>
+                                                    <option value="21">2021</option>
+                                                    <option value="22">2022</option>
+                                                    <option value="23">2023</option>
+                                                    <option value="24">2024</option>
+                                                    <option value="25">2025</option>
+                                                    <option value="26">2026</option>
+                                                    <option value="27">2027</option>
+                                                    <option value="28">2028</option>
+                                                    <option value="29">2029</option>
+                                                    <option value="30">2030</option>
+                                                </select>
+                                                <span class="form__input__error"></span>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form__input">
-                                        <select name="parcelas">
-                                            <option value="1">1x de R$ 10,00</option>
-                                        </select>
+                                    <div class="row">
+                                        <div class="form__input">
+                                            <input type="text" name="codigo" maxlength="3" class="required"
+                                                placeholder="Código de Segurança">
+                                            <span class="form__input__error"></span>
+                                        </div>
                                     </div>
-                                </div>
-                                <button type="submit" disabled>
-                                    <span>Finalizar compra</span>
-                                    <i class="i-loading"></i>
-                                </button>
-                            </form>
-                        </div>
-                        <div class="payment__tab boleto" data-name="boleto">
-                            <div class="box__title">
-                                <h3>3. Pagamento</h3>
+                                    <div class="row">
+                                        <div class="form__input">
+                                            <select name="parcelas">
+                                                <option value="1">1x de R$ 10,00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form__buttons">
+                                        <button type="submit" disabled>
+                                            <span>Finalizar compra</span>
+                                            <i class="i-loading"></i>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="row">
-                                <div class="col-2">
-                                    <img src="./assets/img/icon_boleto.png" alt="">
+                            <div class="payment__tab boleto" data-name="boleto">
+                                <div class="box__title">
+                                    <h3>3. Pagamento</h3>
                                 </div>
-                                <div class="boleto__info">
-                                    <div class="boleto__info__title">
-                                        <i class="fa-solid fa-barcode"></i>
-                                        <strong>Atenção:</strong>
+                                <div class="row">
+                                    <div class="boleto__info">
+                                        <div class="boleto__info__title">
+                                            <i class="fa-solid fa-barcode"></i>
+                                            <strong>Atenção:</strong>
+                                        </div>
+                                        <ol>
+                                            <li>Boleto (somente à vista)</li>
+                                            <li>Pagamentos com Boleto Bancário levam até 3 dias úteis para serem
+                                                compensados
+                                                e então terem os produtos liberados</li>
+                                            <li>Depois do pagamento, fique atento ao seu e-mail para receber os dados de
+                                                acesso
+                                                ao produto (verifique também a caixa de SPAM)</li>
+                                        </ol>
                                     </div>
-                                    <ol>
-                                        <li>Boleto (somente à vista)</li>
-                                        <li>Pagamentos com Boleto Bancário levam até 3 dias úteis para serem compensados
-                                            e então terem os produtos liberados</li>
-                                        <li>Depois do pagamento, fique atento ao seu e-mail para receber os dados de
-                                            acesso
-                                            ao produto (verifique também a caixa de SPAM)</li>
-                                    </ol>
-                                </div>
-                                <div class="boleto__button">
-                                    <a href="#" class="btn"><span>Gerar Boleto</span><i class="i-loading"></i></a>
+                                    <div class="boleto__button">
+                                        <a href="#" class="btn"><span>Gerar Boleto</span><i class="i-loading"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -337,7 +344,7 @@
                     </ul>
                 </div>
                 <div class="col">
-                    <div class="footer__    email" data-title="email">@site.com.br</div>
+                    <div class="footer__email" data-title="email">@site.com.br</div>
                 </div>
             </div>
         </div>

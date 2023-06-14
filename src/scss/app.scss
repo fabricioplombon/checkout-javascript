@@ -44,6 +44,7 @@
     }
 
     &__email {
+
         &:before {
             content: attr(data-title);
         }
@@ -174,6 +175,7 @@
 
     .payment {
         &__tabs {
+
             ul {
                 display: flex;
                 justify-content: stretch;
@@ -198,6 +200,15 @@
                         margin-right: .3rem;
                     }
                 }
+            }
+        }
+
+        &__tab {
+            padding-top: 2rem;
+            display: none;
+
+            &.is-active {
+                display: block;
             }
         }
 
