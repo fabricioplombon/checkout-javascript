@@ -1,6 +1,6 @@
-import { Checkout } from "./form.class";
+import { Form } from "./form.class";
 
-export class Identify extends Checkout {
+export class Identify extends Form {
     form: HTMLFormElement;
     status: HTMLSpanElement;
 
@@ -15,7 +15,6 @@ export class Identify extends Checkout {
         this.status = status;
 
         this.submitIdentify();
-        console.log("identify");
     }
 
     submitIdentify(): void {
@@ -25,13 +24,16 @@ export class Identify extends Checkout {
             e.preventDefault();
 
             this._handleLoading(true);
-            this._handleCleanStatus();
+            this.cleanStatus();
+            this.checkErrors();
 
-            setTimeout(() => {
+            if (this.error) {
                 this._handleLoading(false);
-            }, 2000);
+            }
 
-            console.log("submeteu");
+            // setTimeout(() => {
+            //     this._handleLoading(false);
+            // }, 2000);
         });
     }
 }

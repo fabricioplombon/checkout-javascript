@@ -36,7 +36,7 @@
                 margin-left: .7rem;
 
                 &:hover {
-                    color: var(--color-nd);
+                    color: var(--color-st);
                     transition: all ease-in-out 500ms;
                 }
             }
@@ -156,7 +156,8 @@
 
             &.is-error {
 
-                input {
+                input,
+                select {
                     border: 1px solid var(--color-error);
                 }
             }
